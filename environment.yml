@@ -193,7 +193,7 @@ dependencies:
       - scikit-image==0.20.0
       - scikit-learn==1.4.2
       - scimap
-      - scipy==1.9.1
+      - scipy
       - seaborn==0.11.2
       - segment-analytics-python==2.2.3
       - session-info==1.0.0
