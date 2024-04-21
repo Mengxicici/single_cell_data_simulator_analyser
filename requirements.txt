@@ -1,0 +1,12 @@
+streamlit
+numpy
+pandas3
+scipy
+matplotlib
+seaborn
+plotly
+tqdm
+pygwalker==0.4.8
+anndata
+scanpy
+scimap==1.2.0
