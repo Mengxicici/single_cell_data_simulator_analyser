@@ -10,3 +10,4 @@ pygwalker==0.4.8
 anndata
 scanpy
 scimap
+igraph
