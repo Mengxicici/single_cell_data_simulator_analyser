@@ -326,7 +326,8 @@ app_description = """
 The app integrates various data processing and visualization techniques, allowing users to perform normalization, dimensionality reduction, clustering, and statistical testing directly from their browser. It's built with the biologist in mind, providing intuitive controls and real-time feedback on the dataset's complex structure and expression patterns.
 
 ### Features
-#### Data Simulation:
+#### Data Simulation & analyzer:
+
 - **Characteristics of the Simulated Data**
   - **Cell and Patient Information:**
     - The dataset includes data from a hypothetical set of patients, where each patient has samples taken at different timepoints (e.g., "pre" and "post" treatment).
@@ -369,6 +370,8 @@ The app integrates various data processing and visualization techniques, allowin
 - The app leverages Python libraries such as Scanpy for handling single-cell data, Seaborn and Matplotlib for plotting, and SciPy for statistical analysis.
 - Streamlit's framework is used to create an intuitive user interface, making complex data analysis accessible to users without requiring coding expertise.
 - Data persistence and state management are handled using Streamlit’s session state capabilities, ensuring that user inputs and computed results are retained across interactions.
+
+### Activate the analyzer by clicking Simulate Data button on side bar (click '>' on top left to toggle sidebar)
 """
 
 # Button to show/hide the app description and details
@@ -415,10 +418,12 @@ if 'df' in st.session_state:
 
     # Assuming 'adata' and 'ProteomicNormalizer' are defined correctly
     N_MD="""
-    -**Please Note**
       - Normalization is a mandatory step before performing any downstream analysis. Further analysis will only show after Normalization. Please select the normalization method and click on "Apply Normalization" to proceed.
       """
+
+    st.warning('Please Note', icon="⚠️")
     st.markdown(N_MD)
+
     if st.checkbox('Normalization'):
         st.write('Normalization settings')
         if 'norm' not in st.session_state or st.button('Reset data'):
