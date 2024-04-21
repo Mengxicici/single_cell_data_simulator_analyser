@@ -573,12 +573,12 @@ if 'df' in st.session_state:
                 # sns.swarmplot(x=group_column, y=comparison_variable, data=df[df[group_column].isin([group1, group2])].sample(frac=0.05), color='.25')
                 # Define a color palette that matches the number of groups
                 palette = sns.color_palette("viridis", n_colors=len(df[group_column].unique()))
-
+                filtered_df = df[df[group_column].isin([group1, group2])]
                 # Create a boxplot
                 boxplot = sns.boxplot(
                     x=group_column,
                     y=comparison_variable,
-                    data=df,
+                    data=filtered_df,
                     palette=palette,  # Apply the color palette
                     width=0.5,  # Control the width of the boxes for better readability
                     showfliers=False  # Do not show outliers to avoid clutter
@@ -588,7 +588,7 @@ if 'df' in st.session_state:
                 swarmplot = sns.swarmplot(
                     x=group_column,
                     y=comparison_variable,
-                    data=df.sample(frac=0.05),  # Sample the data to make the swarm plot manageable
+                    data=filtered_df.sample(frac=0.05),  # Sample the data to make the swarm plot manageable
                     palette=palette,  # Use the same palette for consistency
                     dodge=True,  # Ensure swarm dots do not overlap the boxplots
                     alpha=0.7  # Set transparency to make the plot less cluttered
