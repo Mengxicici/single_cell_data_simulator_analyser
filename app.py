@@ -572,7 +572,7 @@ if 'df' in st.session_state:
                 st.write(f"Statistic: {stat}, P-value: {p_value}")
 
             if st.button('Show Comparison Plot'):
-                fig, ax = plt.subplots(figsize=(6, 6))
+                fig, ax = plt.subplots(figsize=(10, 10))
                 # sns.boxplot(x=group_column, y=comparison_variable, data=df[df[group_column].isin([group1, group2])])
                 # sns.swarmplot(x=group_column, y=comparison_variable, data=df[df[group_column].isin([group1, group2])].sample(frac=0.05), color='.25')
                 # Define a color palette that matches the number of groups
@@ -594,7 +594,7 @@ if 'df' in st.session_state:
                     y=comparison_variable,
                     data=filtered_df.sample(frac=0.05),  # Sample the data to make the swarm plot manageable
                     palette=palette,  # Use the same palette for consistency
-                    dodge=True,  # Ensure swarm dots do not overlap the boxplots
+                    dodge=False,  # Ensure swarm dots do not overlap the boxplots
                     alpha=0.7  # Set transparency to make the plot less cluttered
                     )
                 plt.title('Comparison of Selected Groups')
