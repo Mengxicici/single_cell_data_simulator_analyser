@@ -371,7 +371,7 @@ The app integrates various data processing and visualization techniques, allowin
 - Streamlit's framework is used to create an intuitive user interface, making complex data analysis accessible to users without requiring coding expertise.
 - Data persistence and state management are handled using Streamlit’s session state capabilities, ensuring that user inputs and computed results are retained across interactions.
 
-### Start!
+### Start! :smile: 
 - Activate the analyzer by clicking the "Simulate Data" button in the sidebar. To toggle the sidebar, click on the '>' icon at the top left.
 """
 
