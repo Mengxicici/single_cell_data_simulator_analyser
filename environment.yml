@@ -10,7 +10,7 @@ dependencies:
       - anndata==0.7.8
       - annotated-types==0.6.0
       - app-model==0.2.6
-      - bokeh==3.4.1
+      - bokeh
       - ipykernel==6.29.4
       - ipython==8.12.3
       - ipywidgets==8.1.2
