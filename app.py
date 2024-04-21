@@ -414,7 +414,11 @@ if 'df' in st.session_state:
     import pandas as pd
 
     # Assuming 'adata' and 'ProteomicNormalizer' are defined correctly
-
+    N_MD="""
+    -**Please Note**
+      - Normalization is a mendatory step before performing any downstream analysis. Further analysis will only show after Normalization. Please select the normalization method and click on "Apply Normalization" to proceed.
+      """
+    st.markdown(N_MD)
     if st.checkbox('Normalization'):
         st.write('Normalization settings')
         if 'norm' not in st.session_state or st.button('Reset data'):
