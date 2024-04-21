@@ -130,7 +130,7 @@ dependencies:
       - npe2==0.7.5
       - numba
       - numcodecs==0.12.1
-      - numpy==1.22.4
+      - numpy
       - numpydoc==1.7.0
       - ome-zarr==0.8.3
       - packaging==24.0
