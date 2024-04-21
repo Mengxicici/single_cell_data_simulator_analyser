@@ -419,7 +419,7 @@ if 'df' in st.session_state:
 
     # Assuming 'adata' and 'ProteomicNormalizer' are defined correctly
     N_MD="""
-      - Normalization is a mandatory step before performing any downstream analysis. Further analysis will only show after Normalization. Please select the normalization method and click on "Apply Normalization" to proceed.
+      - Normalization is a mandatory step before performing any downstream analysis. Further analysis will only show after Normalization. Please select the normalization method and click on "Apply Normalization" to proceed.:face_with_raised_eyebrow:
       """
 
     st.warning('Please Note', icon="⚠️")
