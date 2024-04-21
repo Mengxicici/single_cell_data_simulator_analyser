@@ -14,7 +14,7 @@ dependencies:
     - scipy
     - matplotlib
     - seaborn
-    - scimap
+    - scimap==1.2
     - scanpy
     - plotly 
     - tqdm
