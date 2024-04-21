@@ -9,4 +9,4 @@ tqdm
 pygwalker==0.4.8
 anndata
 scanpy
-scimap==1.2.0
+scimap
