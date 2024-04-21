@@ -11,3 +11,4 @@ anndata
 scanpy
 scimap
 igraph
+leidenalg
