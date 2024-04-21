@@ -128,7 +128,7 @@ dependencies:
       - nest-asyncio==1.6.0
       - networkx==3.2.1
       - npe2==0.7.5
-      - numba==0.55.2
+      - numba
       - numcodecs==0.12.1
       - numpy==1.22.4
       - numpydoc==1.7.0
@@ -253,4 +253,5 @@ dependencies:
       - zarr==2.10.3
       - zict==3.0.0
       - zipp==3.18.1
+      - pip
 prefix: /opt/homebrew/Caskroom/miniconda/base/envs/st
