@@ -192,7 +192,7 @@ dependencies:
       - scanpy==1.9.6
       - scikit-image==0.20.0
       - scikit-learn==1.4.2
-      - scimap==1.2.0
+      - scimap
       - scipy==1.9.1
       - seaborn==0.11.2
       - segment-analytics-python==2.2.3
