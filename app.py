@@ -390,7 +390,7 @@ if 'df' in st.session_state:
     
     
     st.subheader('Data Summary')
-    if st.button('Show data'):
+    if st.button('Show data head'):
         st.write(df.head())
     if st.button('Show basic statistics'):
         st.subheader('Basic Statistics')
