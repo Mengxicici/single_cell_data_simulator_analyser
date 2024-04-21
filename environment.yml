@@ -2,8 +2,10 @@ name: st
 channels:
   - conda-forge
   - defaults
-  - pip
+
 dependencies:
+  - python=3.8  
+  - pip  
   - pip:
       - aiobotocore==2.12.3
       - aiohttp==3.9.5
