@@ -15,7 +15,12 @@ dependencies:
     - matplotlib
     - seaborn
     - scimap
-    - scannpy
+    - scanpy
+    - plotly 
+    - tqdm
+    - pygwalker
+    - anndata
+    - seaborn
     
 
 prefix: /opt/homebrew/Caskroom/miniconda/base/envs/st
