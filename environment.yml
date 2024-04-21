@@ -2,6 +2,7 @@ name: st
 channels:
   - conda-forge
   - defaults
+  - pip
 dependencies:
   - pip:
       - aiobotocore==2.12.3
