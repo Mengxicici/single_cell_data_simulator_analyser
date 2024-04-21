@@ -1,74 +1,21 @@
+
 name: st
 channels:
   - conda-forge
   - defaults
 
 dependencies:
-  - python=3.9  
-  - pip  
+  - python=3.9
+  - pip
   - pip:
-      - anndata==0.7.8
-      - annotated-types==0.6.0
-      - app-model==0.2.6
-      - bokeh
-      - ipykernel==6.29.4
-      - ipython==8.12.3
-      - ipywidgets==8.1.2
-      - jupyter-client==8.6.1
-      - jupyter-core==5.7.2
-      - jupyterlab-pygments==0.3.0
-      - jupyterlab-widgets==3.0.10
-      - leidenalg==0.10.2
-      - llvmlite
-      - locket==1.0.0
-      - magicgui==0.8.2
-      - markdown==3.6
-      - markdown-it-py==3.0.0
-      - markupsafe==2.1.5
-      - matplotlib
-      - matplotlib-inline
-      - mdurl==0.1.2
-      - mergedeep==1.3.4
-      - mistune==3.0.2
-      - mkdocs==1.5.3
-      - mkdocs-material==7.3.6
-      - mkdocs-material-extensions==1.3.1
-      - monotonic==1.6
-      - more-itertools==10.2.0
-      - mpl-scatter-density==0.7
-      - mpmath==1.3.0
-      - msgpack==1.0.8
-      - multidict==6.0.5
-      - numpy
-      - pandas==1.5.3
-      - plotly==5.21.0
-      - pluggy==0.13.1
-      - pooch==1.8.1
-      - prompt-toolkit==3.0.43
-      - protobuf==4.25.3
-      - pygwalker==0.4.8
-      - pyyaml==6.0.1
-      - pyyaml-env-tag==0.1
-      - scanpy==1.9.6
-      - scikit-image==0.20.0
-      - scikit-learn==1.4.2
-      - scimap
-      - scipy
-      - seaborn==0.11.2
-      - streamlit
-      - tifffile==2020.12.8
-      - tinycss2==1.2.1
-      - toml==0.10.2
-      - tomli==2.0.1
-      - tomli-w==1.0.0
-      - toolz==0.12.1
-      - tornado==6.4
-      - tqdm==4.66.2
-      - traitlets==5.14.3
-      - typer==0.12.3
-      - types-python-dateutil==2.9.0.20240316
-      - typing-extensions==4.11.0
-      - tzdata==2024.1
-      - umap-learn==0.5.6
+    - streamlit
+    - numpy
+    - pandas
+    - scipy
+    - matplotlib
+    - seaborn
+    - scimap
+    - scannpy
+    
 
 prefix: /opt/homebrew/Caskroom/miniconda/base/envs/st
