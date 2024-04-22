@@ -345,7 +345,7 @@ The app integrates various data processing and visualization techniques, allowin
     - Based on spatial information, users can detect margin of the cell clusters (eg: Tumor margin), which in not included in the current version of the app.
     
 - **Normalization Settings:**
-  - Users can choose a batch key from their dataset for normalization, ensuring that batch effects can be minimized in downstream analyses.
+  - Users can choose a batch key from their dataset for normalization, ensuring that batch effects can be minimized in downstream analyses.(MAGIC algorithm not included in current version)
   - Two methods for normalization can be selected, which include logarithmic transformation, z-score standardization, quantile normalization, and a batch-specific normalization.
   - Normalization is applied only upon user request, and the results are immediately available for review.
 
@@ -355,15 +355,15 @@ The app integrates various data processing and visualization techniques, allowin
   - **UMAP (Uniform Manifold Approximation and Projection):** After performing clustering via the Leiden algorithm, UMAP plots can be generated to visualize the data in a reduced two-dimensional space. This feature helps in identifying clusters or groups within the data, with options to color the plot based on various metadata attributes.
 
 - **Dimensionality Reduction and Clustering:**
-  - The app allows users to compute PCA and UMAP directly, with settings to adjust the resolution for clustering, providing a nuanced understanding of the data structure.
-  - The clustering results can be visualized in UMAP plots, with flexibility in choosing color schemes based on different metadata to highlight the clusters.
+  - The app allows users to compute PCA and UMAP directly, providing a nuanced understanding of the data structure.
+  - Use leiden algorithm to make clusters ["leiden paper"]](https://www.nature.com/articles/s41598-019-41695-z)["leiden wiki"](https://en.wikipedia.org/wiki/Leiden_algorithm) with settings to adjust the resolution for clustering, The clustering results can be visualized in UMAP plots, with flexibility in choosing color schemes based on different metadata to highlight the clusters.
 
 - **Statistical Testing:**
   - The Wilcoxon test can be performed to statistically compare expression levels between two selected groups. This is crucial for identifying significant differences in protein expression across conditions or phenotypes.
   - Users can select the groups and the protein or gene of interest for comparison, and results including the test statistic and p-value are displayed.
 
 - **Interactive Exploration:**
-  - The app includes interactive elements like sliders, dropdowns, and buttons that allow users to customize analyses and visualizations on the fly.
+  - The app includes exploration section with elements like sliders, dropdowns, and buttons that allow users to customize analyses and visualizations on the fly.
   - Data insights and plots can be refreshed and regenerated based on user inputs, facilitating a dynamic exploration environment.
 
 ### Technical Aspects
