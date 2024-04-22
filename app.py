@@ -356,7 +356,7 @@ The app integrates various data processing and visualization techniques, allowin
 
 - **Dimensionality Reduction and Clustering:**
   - The app allows users to compute PCA and UMAP directly, providing a nuanced understanding of the data structure.
-  - Use leiden algorithm to make clusters ["leiden paper"]](https://www.nature.com/articles/s41598-019-41695-z)["leiden wiki"](https://en.wikipedia.org/wiki/Leiden_algorithm) with settings to adjust the resolution for clustering, The clustering results can be visualized in UMAP plots, with flexibility in choosing color schemes based on different metadata to highlight the clusters.
+  - Use leiden algorithm to make clusters ["leiden paper"](https://www.nature.com/articles/s41598-019-41695-z)["leiden wiki"](https://en.wikipedia.org/wiki/Leiden_algorithm) with settings to adjust the resolution for clustering, The clustering results can be visualized in UMAP plots, with flexibility in choosing color schemes based on different metadata to highlight the clusters.
 
 - **Statistical Testing:**
   - The Wilcoxon test can be performed to statistically compare expression levels between two selected groups. This is crucial for identifying significant differences in protein expression across conditions or phenotypes.
