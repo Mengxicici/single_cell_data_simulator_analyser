@@ -401,7 +401,7 @@ if 'df' in st.session_state:
         st.write(df.describe())
         
     if st.checkbox('Plot Violin Matrix Dot Plot'):
-        groupby_n = st.selectbox('Select groupby for normed data', list(adata.obs.columns))
+        groupby_n = st.selectbox('Select groupby for UNnormed data', list(adata.obs.columns))
         
         fig=make_violin_matrix_dot_plot(adata,groupby_n)
         st.pyplot(fig)
@@ -417,7 +417,7 @@ if 'df' in st.session_state:
     import streamlit as st
     import pandas as pd
 
-    # Assuming 'adata' and 'ProteomicNormalizer' are defined correctly
+    
     N_MD="""
     Please Note:face_with_raised_eyebrow:
     - Normalization is a mandatory step before performing any downstream analysis. Further analysis will only show after Normalization. Please select the normalization method and click on "Apply Normalization" to proceed.
