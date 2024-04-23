@@ -275,7 +275,7 @@ def make_violin_matrix_dot_plot(adata, groupby, categories_order=None,dpi=300):
     fig, axes = plt.subplots(2, 1, figsize=(9, 16))
     
     # Unpack the axes for clarity
-    ax1, ax2, ax3 = axes
+    ax1, ax2 = axes
 
     # Stacked Violin Plot
     # Note: Scanpy's plotting functions return their own Axes objects, so we need to handle them appropriately.
