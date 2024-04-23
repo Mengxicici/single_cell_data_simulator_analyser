@@ -272,7 +272,7 @@ import scanpy as sc
 
 def make_violin_matrix_dot_plot(adata, groupby, categories_order=None,dpi=300):
     # Create a figure with 3 subplots
-    fig, axes = plt.subplots(3, 1, figsize=(9, 25))
+    fig, axes = plt.subplots(2, 1, figsize=(9, 16))
     
     # Unpack the axes for clarity
     ax1, ax2, ax3 = axes
@@ -290,8 +290,8 @@ def make_violin_matrix_dot_plot(adata, groupby, categories_order=None,dpi=300):
     
 
     # Dot Plot
-    sc.pl.dotplot(adata, var_names=adata.var_names, groupby=groupby,
-                  categories_order=categories_order, ax=ax3, show=False, title='Dot Plot')
+    # sc.pl.dotplot(adata, var_names=adata.var_names, groupby=groupby,
+    #               categories_order=categories_order, ax=ax3, show=False, title='Dot Plot')
     
 
     plt.tight_layout()  # Adjust layout to prevent overlap
@@ -402,7 +402,7 @@ if 'df' in st.session_state:
         st.write(df.describe())
         
         
-    if st.checkbox('Plot Violin Matrix Dot Plot'):
+    if st.checkbox('Plot Violin Matrix Plot'):
         groupby_n = st.selectbox('Select groupby for UNnormed data', options=['Phenotype', 'Timepoint', 'Response', 'exp_group', 'SampleID', 'Patient'])
         
         fig=make_violin_matrix_dot_plot(adata,groupby_n)
@@ -448,7 +448,7 @@ if 'df' in st.session_state:
             st.write(pd.DataFrame(st.session_state['norm'].X, columns=[f"Protein_{i+1}" for i in range(st.session_state['norm'].X.shape[1])]).head())
             st.write(pd.DataFrame(st.session_state['norm'].X, columns=[f"Protein_{i+1}" for i in range(st.session_state['norm'].X.shape[1])]).describe())
 
-        if st.checkbox('Show Violin Matrix Dot Plot'):
+        if st.checkbox('Show Violin Matrix Plot'):
             groupby = st.selectbox('Select groupby for Normed data plots', options=['Phenotype', 'Timepoint', 'Response', 'exp_group', 'SampleID', 'Patient'])
             fig = make_violin_matrix_dot_plot(st.session_state['norm'], groupby)
             st.pyplot(fig)
