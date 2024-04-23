@@ -398,7 +398,9 @@ if 'df' in st.session_state:
         st.write(df.head())
     if st.button('Show basic statistics'):
         st.subheader('Basic Statistics')
+        st.write(f"data shape: {df.shape}")
         st.write(df.describe())
+        
         
     if st.checkbox('Plot Violin Matrix Dot Plot'):
         groupby_n = st.selectbox('Select groupby for UNnormed data', options=['Phenotype', 'Timepoint', 'Response', 'exp_group', 'SampleID', 'Patient'])
