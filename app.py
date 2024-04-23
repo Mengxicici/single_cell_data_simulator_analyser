@@ -401,7 +401,7 @@ if 'df' in st.session_state:
         st.write(df.describe())
         
     if st.checkbox('Plot Violin Matrix Dot Plot'):
-        groupby_n = st.selectbox('Select groupby for UNnormed data', options=['Phenotype', 'Timepoint', 'Response', 'exp_group', 'SampleID', 'Patient'],default=['exp_group'])
+        groupby_n = st.selectbox('Select groupby for UNnormed data', options=['Phenotype', 'Timepoint', 'Response', 'exp_group', 'SampleID', 'Patient'])
         
         fig=make_violin_matrix_dot_plot(adata,groupby_n)
         st.pyplot(fig)
@@ -447,7 +447,7 @@ if 'df' in st.session_state:
             st.write(pd.DataFrame(st.session_state['norm'].X, columns=[f"Protein_{i+1}" for i in range(st.session_state['norm'].X.shape[1])]).describe())
 
         if st.checkbox('Show Violin Matrix Dot Plot'):
-            groupby = st.selectbox('Select groupby for Normed data plots', options=['Phenotype', 'Timepoint', 'Response', 'exp_group', 'SampleID', 'Patient'],default=['SampleID'])
+            groupby = st.selectbox('Select groupby for Normed data plots', options=['Phenotype', 'Timepoint', 'Response', 'exp_group', 'SampleID', 'Patient'])
             fig = make_violin_matrix_dot_plot(st.session_state['norm'], groupby)
             st.pyplot(fig)
 
