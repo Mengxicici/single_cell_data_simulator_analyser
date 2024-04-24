@@ -7,10 +7,10 @@ import scimap as sm
 from tqdm import tqdm
 import anndata as ad
 from matplotlib.pyplot import rc_context
-
+import anndata
+from scipy.stats import rankdata
 import numpy as np
 import pandas as pd
-import seaborn as sns
 import pygwalker as pyg
 import streamlit as st
 import matplotlib.pyplot as plt
@@ -48,13 +48,10 @@ def save_anndata(adata,outdir,name):
     with open(outdir+name, 'wb') as f:
         pickle.dump(adata, f)
         
-import numpy as np
-import pandas as pd
-import scanpy as sc
 from scipy.stats import gamma
 import scipy.stats as stats
 
-def pygwaler(raw, save=False):
+def pygwakler(raw, save=False):
     # Extract the expression data
     expression_data = pd.DataFrame(raw.X)
     expression_data.columns = [f"Protein_{i+1}" for i in range(raw.X.shape[1])]
@@ -97,7 +94,7 @@ def simulate_single_cell_data_old(n_patients=10, n_cells_per_sample=100, protein
     
     markers_per_phenotype=proteins-5
     from scipy.stats import gamma, norm
-    # Create paåtient and timepoint data
+    # Create patient and timepoint data
     patient_ids = np.repeat(np.arange(1, n_patients + 1), n_cells_per_sample * 2)
     timepoints = np.tile(np.repeat(["pre", "post"], n_cells_per_sample), n_patients)
     
@@ -170,9 +167,7 @@ def simulate_single_cell_data_old(n_patients=10, n_cells_per_sample=100, protein
 
 
 
-import anndata
-import numpy as np
-from scipy.stats import rankdata
+
 
 class ProteomicNormalizer:
     def __init__(self, adata, batch_key):
@@ -267,8 +262,7 @@ class ProteomicNormalizer:
             self.log1p_zscore_bySamples()
         else:
             raise ValueError("Invalid normalization method. Choose from 'median_scale', 'zscore', or 'quantile'.")
-import matplotlib.pyplot as plt
-import scanpy as sc
+
 
 def make_violin_matrix_dot_plot(adata, groupby, categories_order=None,dpi=300):
     # Create a figure with 3 subplots
@@ -416,8 +410,6 @@ if 'df' in st.session_state:
         
         
     st.subheader('Data Preprocessing')
-    import streamlit as st
-    import pandas as pd
 
     
     N_MD="""
